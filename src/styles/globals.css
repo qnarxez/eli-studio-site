@@ -1,0 +1,92 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* RGB format for use with rgb() */
+    --color-primary: 128 0 128;
+    --color-primary-dark: 96 0 96;
+    --color-primary-light: 160 0 160;
+    
+    /* Dark backgrounds - very dark */
+    --color-bg-dark: 8 8 12;
+    --color-bg-dark-alt: 15 15 20;
+    
+    /* Light backgrounds - medium-dark gray */
+    --color-bg-light: 30 30 35;
+    --color-bg-light-alt: 40 40 48;
+    
+    /* Text on dark backgrounds - bright white/light */
+    --color-text-dark-bg: 255 255 255;
+    --color-text-dark-bg-secondary: 240 240 245;
+    --color-text-dark-bg-muted: 210 210 220;
+    
+    /* Text on light backgrounds - bright light */
+    --color-text-light-bg: 255 255 255;
+    --color-text-light-bg-secondary: 235 235 245;
+    --color-text-light-bg-muted: 200 200 215;
+  }
+
+  * {
+    transition: background-color 0.3s ease;
+  }
+
+  body {
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1 {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: rgb(var(--color-text-dark-bg));
+  }
+
+  h2 {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: rgb(var(--color-text-dark-bg));
+  }
+
+  h3 {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: rgb(var(--color-text-dark-bg));
+  }
+
+  p {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: rgb(var(--color-text-dark-bg-secondary));
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
